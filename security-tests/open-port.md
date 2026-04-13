@@ -41,7 +41,7 @@ AWS Config flagged the security group as **NON_COMPLIANT** under the `restricted
 
 CloudTrail recorded the `AuthorizeSecurityGroupIngress` event, capturing the user, timestamp, and rule change. This demonstrates that CloudTrail can capture network-level configuration changes and provide traceability for security group modifications.
 
-![CloudTrail security group ingress change](../evidence/screenshots/open-port/Cloudtrail AuthorizeSecurityGroupIngress.png)
+![CloudTrail security group ingress change](../evidence/screenshots/open-port/cloudtrail-authorizesecuritygroupingress.png)
 
 ## Remediation
 
