@@ -10,7 +10,7 @@ Prior to this test, the IAM role (`aws-sec-lab-ec2-role`) was configured followi
 
 ![Baseline IAM role summary](../evidence/screenshots/baseline/iam-ec2-role-summary.png)
 
-![Baseline IAM S3 read policy JSON](../evidence/screenshots/iam-overpermission/IAM s3-read-json.png)
+![Baseline IAM S3 read policy JSON](../evidence/screenshots/iam-overpermission/iam-s3-read-json.png)
 
 ## Misconfiguration
 
@@ -25,11 +25,11 @@ An over-permissive IAM policy was created and attached to the EC2 role, granting
 
 This resulted in the EC2 role having administrative-level access, violating the principle of least privilege.
 
-![Over-permissive policy JSON](../evidence/screenshots/iam-overpermission/IAM overpriv json.png)
+![Over-permissive policy JSON](../evidence/screenshots/iam-overpermission/iam-overpriv-json.png)
 
-![Over-permissive policy attached](../evidence/screenshots/iam-overpermission/IAM attached policy.png)
+![Over-permissive policy attached](../evidence/screenshots/iam-overpermission/iam-attached-policy.png)
 
-![Role after attachment](../evidence/screenshots/iam-overpermission/IAM overpriv attached.png)
+![Role after attachment](../evidence/screenshots/iam-overpermission/iam-overpriv-attached.png)
 
 ## Risks
 
