@@ -15,7 +15,7 @@ AWS Config was used to track changes across key resources including:
 
 ## Baseline Evidence
 
-![AWS Config rules](../evidence/screenshots/baseline/Config Rules.png)
+![AWS Config rules](../evidence/screenshots/baseline/config-rules.png)
 
 ## Rules Used
 
