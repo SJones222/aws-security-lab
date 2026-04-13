@@ -17,7 +17,7 @@ A VPC was configured to isolate cloud resources and control network traffic with
 
 - **VPC CIDR:** `10.0.0.0/16`
 
-![VPC summary](../evidence/screenshots/baseline/VPC Screenshot.png)
+![VPC summary](../evidence/screenshots/baseline/vpc-screenshot.png)
 
 ### Subnets
 
@@ -28,7 +28,7 @@ The VPC contains two subnets:
 
 The public subnet hosts the EC2 instance. The private subnet currently has no deployed resources and exists to demonstrate segmentation and how internal workloads would be isolated in a more production-oriented design.
 
-![Subnet configuration](../evidence/screenshots/baseline/Subnet Screenshot.png)
+![Subnet configuration](../evidence/screenshots/baseline/subnet-screenshot.png)
 
 ### Route Table
 
@@ -39,7 +39,7 @@ A route table was configured for the public subnet with:
 
 This enables internet connectivity for the EC2 instance while preserving local communication inside the VPC.
 
-![Route table](../evidence/screenshots/baseline/Route Table Screenshot.png)
+![Route table](../evidence/screenshots/baseline/route-table-screenshot.png)
 
 ### Network ACLs
 
@@ -57,15 +57,15 @@ An EC2 instance was deployed in the public subnet to support controlled security
 
 The EC2 instance was placed in the public subnet so the lab could simulate real-world exposure scenarios such as open ports and unauthorized access attempts. In a production environment, sensitive workloads would generally be placed in a private subnet.
 
-![EC2 summary](../evidence/screenshots/baseline/EC2 Summary.png)
+![EC2 summary](../evidence/screenshots/baseline/ec2-summary.png)
 
 The security group initially allowed SSH access only from a trusted IP address.
 
-![EC2 security group baseline](../evidence/screenshots/baseline/EC2 SG.png)
+![EC2 security group baseline](../evidence/screenshots/baseline/ec2-sg.png)
 
 The networking configuration confirmed placement in the public subnet and the presence of both public and private addressing.
 
-![EC2 networking](../evidence/screenshots/baseline/EC2 Network.png)
+![EC2 networking](../evidence/screenshots/baseline/ec2-network.png)
 
 ### SSH Setup Note
 
@@ -82,9 +82,9 @@ The S3 bucket was configured as a private storage resource for testing access co
 
 > Important: S3 is a regional AWS service and is not deployed inside the VPC.
 
-![S3 baseline configuration](../evidence/screenshots/baseline/S3.png)
+![S3 baseline configuration](../evidence/screenshots/baseline/s3.png)
 
-![S3 block public access](../evidence/screenshots/baseline/S3 Block Public Access.png)
+![S3 block public access](../evidence/screenshots/baseline/s3-block-public-access.png)
 
 ## Identity and Access Management
 
@@ -97,11 +97,11 @@ A dedicated IAM role was created and attached to the EC2 instance:
 
 The attached custom policy provided read-only access to the designated S3 bucket, following the principle of least privilege.
 
-![IAM EC2 role summary](../evidence/screenshots/baseline/IAM EC2 Role Summary.png)
+![IAM EC2 role summary](../evidence/screenshots/baseline/iam-ec2-role-summary.png)
 
-![IAM S3 read policy](../evidence/screenshots/baseline/IAM s3 Read Policy.png)
+![IAM S3 read policy](../evidence/screenshots/baseline/iam-s3-read-policy.png)
 
-![IAM S3 read policy JSON](../evidence/screenshots/baseline/IAM s3-read Policy JSON.png)
+![IAM S3 read policy JSON](../evidence/screenshots/baseline/iam-s3-read-policy-json.png)
 
 ## Monitoring and Logging
 
@@ -109,7 +109,7 @@ The attached custom policy provided read-only access to the designated S3 bucket
 
 CloudTrail was enabled to log management events and store audit logs in a dedicated S3 bucket separate from application data. This helps preserve audit evidence and improve traceability.
 
-![CloudTrail configuration](../evidence/screenshots/baseline/Cloudtrail.png)
+![CloudTrail configuration](../evidence/screenshots/baseline/cloudtrail.png)
 
 ### AWS Config
 
@@ -118,7 +118,7 @@ AWS Config was enabled to record resource configurations and support compliance 
 - `s3-bucket-level-public-access-prohibited`
 - `s3-bucket-public-read-prohibited`
 
-![AWS Config rules](../evidence/screenshots/baseline/Config Rules.png)
+![AWS Config rules](../evidence/screenshots/baseline/config-rules.png)
 
 ### CloudWatch
 
