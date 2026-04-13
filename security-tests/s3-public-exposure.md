@@ -8,7 +8,7 @@ The purpose of this test was to simulate a common cloud storage misconfiguration
 
 Prior to this test, the S3 bucket had all public access blocked and no public policies applied. This ensured the environment was secure before introducing the misconfiguration.
 
-![S3 baseline](../evidence/screenshots/baseline/S3 Block Public Access.png)
+![S3 baseline](../evidence/screenshots/baseline/s3-block-public-access.png)
 
 ## Misconfiguration
 
