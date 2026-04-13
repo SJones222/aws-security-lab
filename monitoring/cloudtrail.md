@@ -15,7 +15,7 @@ This separation of concerns helps protect audit evidence from accidental exposur
 
 ## Baseline Evidence
 
-![CloudTrail baseline](../evidence/screenshots/baseline/Cloudtrail.png)
+![CloudTrail baseline](../evidence/screenshots/baseline/cloudtrail.png)
 
 ## Use in Security Tests
 
