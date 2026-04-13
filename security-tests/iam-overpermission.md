@@ -8,7 +8,7 @@ Simulate excessive IAM permissions to evaluate the risks associated with over-pr
 
 Prior to this test, the IAM role (`aws-sec-lab-ec2-role`) was configured following least-privilege principles, with permissions limited to read-only access for a specific S3 bucket. No excessive or wildcard permissions were present.
 
-![Baseline IAM role summary](../evidence/screenshots/baseline/IAM EC2 Role Summary.png)
+![Baseline IAM role summary](../evidence/screenshots/baseline/iam-ec2-role-summary.png)
 
 ![Baseline IAM S3 read policy JSON](../evidence/screenshots/iam-overpermission/IAM s3-read-json.png)
 
