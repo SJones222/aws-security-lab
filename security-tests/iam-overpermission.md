@@ -27,8 +27,6 @@ This resulted in the EC2 role having administrative-level access, violating the 
 
 ![Over-permissive policy JSON](../evidence/screenshots/iam-overpermission/iam-overpriv-json.png)
 
-![Over-permissive policy attached](../evidence/screenshots/iam-overpermission/iam-attached-policy.png)
-
 ![Role after attachment](../evidence/screenshots/iam-overpermission/iam-overpriv-attached.png)
 
 ## Risks
@@ -53,7 +51,7 @@ Due to the global nature of IAM, these events were recorded in `us-east-1` rathe
 
 This also demonstrates that while CloudTrail provides visibility into identity-related changes, identifying over-permission scenarios often requires manual analysis or additional tools.
 
-![CloudTrail IAM attachment event](../evidence/screenshots/iam-overpermission/IAM AttachRolePolicy.png)
+![CloudTrail IAM attachment event](../evidence/screenshots/iam-overpermission/iam-attachrolepolicy.png)
 
 ## Remediation
 
@@ -65,7 +63,7 @@ The misconfiguration was resolved by:
 
 These steps ensured the role was returned to a secure, limited-access state.
 
-![IAM role after remediation](../evidence/screenshots/iam-overpermission/IAM Remediated.png)
+![IAM role after remediation](../evidence/screenshots/iam-overpermission/iam-remediated.png)
 
 ## Validation
 
